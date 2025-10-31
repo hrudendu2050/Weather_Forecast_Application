@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/style.css">
+    </head>
+<body class="m-0 p-0 max-w-lvw min-h-lvh bg-linear-to-t from-yellow-300 to-blue-200">
+    <div>
+        <header class="min-w-80 h-30 bg-blue-800 text-3xl font-extrabold text-yellow-300 m-5 rounded-2xl flex justify-center pt-10">Your Daily Weather</header>
+    </div>
+    <div class="flex flex-wrap">
+        <div class="flex-col bg-blue-600 m-5 rounded-2xl text-white">
+            <h1 class=" flex-col p-3 text-3xl">Enter Your City</h1>
+            <input id="city-input" id="search-input" onfocus="showDropdown()" placeholder="Delhi..." type="text" autocomplete="on" class="p-2 m-4 border-2 rounded-2xl h-15 w-4/5">
+            <div class="flex flex-row justify-center">
+                <button id="search-btn" id="save-button" onclick="saveEntry()" class="mt-2 text-center border-2 p-2 rounded-2xl hover:text-yellow-300 transition-colors">Search</button>
+            </div>
+            <p class="mt-4 text-center">  ------------OR------------ </p>
+            <button id="location-btn" class="m-6 border-2 p-2 rounded-2xl  hover:text-yellow-300 transition-colors">Auto Locate</button>
+        </div>
+        <div class="flex-3/4 flex-wrap">
+            <div class="flex justify-around h-min-60 bg-blue-400 m-5 rounded-2xl text-white">
+                <div class="flex-col">
+                    <h1 id="location-name" class="font-bold text-5xl p-4 m-5">City, Country</h1>
+                </div>
+                <div class="p-4 m-4">
+                    <h2 id="temperature" class="text-4xl font-extrabold">Temperature:-- °C</h2>
+                    <h2 id="description" class="text-2xl font-bold">Loading...</h2>
+                </div>
+                <div class="flex-col mt-10">
+                    <p class="font-bold">Humidity: <span id="humidity">--%</span></p>
+                    <p class="font-bold">Wind Speed: <span id="wind-speed">-- km/h</span></p>
+                </div>
+                <img id="weather-icon" src="" alt="Weather Icon" class="flex-wrap w-50 h-50 "/>
+            </div>
+
+            <h1 class="mx-12 text-3xl text-blue-800 font-bold text-shadow-2xs">5-Day Forecast</h1>
+
+            <div class="flex-5 h-80 bg-blue-200 m-5 rounded-2xl">
+                <div>
+                    <div id="forecast-container">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

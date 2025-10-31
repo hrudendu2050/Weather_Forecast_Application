@@ -1,0 +1,17 @@
+
+.forecast-item {
+    background: rgb(86, 168, 255);
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 200px;
+    min-height: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.forecast-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+}
